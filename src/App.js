@@ -1,20 +1,33 @@
-import React from 'react';
-import Courses from "./bd/courses";
+import React, { Component } from 'react';
+// import Courses from "./bd/courses";
+import Main from "./components/main/";
+import Header from "./components/header";
+import Footer from "./components/footer/";
 import './App.css';
 
-function App() {
+class App extends Component {
 
-    return (
-        <div className="app-container">
-            <figure>
-                <img className="logo" src="jida.png"/>
-                <figcaption>
-                    <h4>Prueba técnica de javascript
-                        <small>¡&Eacute;xito y Good Coding!</small></h4>
-                </figcaption>
-            </figure>
-        </div>
-    );
+//   constructor(props){
+//     super(props);
+//   }
+
+  componentDidMount = () => {
+  }
+
+    render() {
+        let header = <Header/>;
+        var main = <Main/>;
+        let footer = <Footer/>;
+
+        return (
+            <div>
+                {header}
+                {main}
+                {footer}
+            </div>
+        );
+
+    }
 }
 
 export default App;
